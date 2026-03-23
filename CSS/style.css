@@ -8,7 +8,7 @@
     --gris-clair: #eee;
 
 }
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,12 +16,12 @@
 }
 body{
     background-color: var(--gris-clair);
-    font-family: roboto, sans-serif;
+    font-family:roboto, sans-serif;
     line-height: 1.6;
 }
 header{
     background-color: white;
-    box-shadow: 2px  10px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px  6px 10px rgba(0, 0, 0, 0.05);
     position:sticky ;
     top: 0;
     z-index: 100;
@@ -45,7 +45,7 @@ ul{
     display: flex;
 }
 ul li a{
-    text-decoration: none; 
+    text-decoration: none;
     color: var(--gris-fonce);
     font-weight: 600;
     font-size: 1.1rem;
@@ -75,4 +75,47 @@ a.active::after{
     width: 100%;
 
 
+}
+section.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; /*permet d'ajouter des l'espace entre des element*/
+    text-align: center;
+    margin: 10rem 2rem;
+}
+.hero img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--violet-doux);
+}
+.hero h1{
+    color: var(--violet-foncé);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.hero p{
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+.hero a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero a:hover{
+    background-color: var(--violet-foncé);
+    transform: translateY(-3px);
 }
