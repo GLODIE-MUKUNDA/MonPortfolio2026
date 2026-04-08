@@ -174,7 +174,7 @@ section h2::after{
     
 }
 .competences table tbody tr{
-    transition: background-color 0.3s ease;
+    transition: ;background-color 0.3s ease;
 }
 .competences table tbody tr:hover{
     background-color: #F0F0F0;
@@ -194,10 +194,11 @@ footer div{
     font-size: 1.6rem;
     color: white;
     margin: 0 10px;
-    transition: color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease; transform 0.2s ease;
 
 }
 footer div:hover{
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+
