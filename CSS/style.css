@@ -1,3 +1,4 @@
+/*index.hhtml*/
 :root{
     --violet-doux: #6c63ff;
     --violet-foncé: #534edd;
@@ -202,7 +203,7 @@ footer div:hover{
     transform: translateY(-3px);
 }
 
-
+/*projet.html*/
 .projects {
     text-align: center;
     padding: 60px 10%;
@@ -304,7 +305,7 @@ footer div:hover{
     background: #4a42e8;
 }
 
-
+/*cpntact.html*/
 
 .contact {
     text-align: center;
@@ -314,6 +315,23 @@ footer div:hover{
 .contact h1 {
     color: var(--violet-doux);
     margin-bottom: 40px;
+}
+/* Ligne décorative sous le titre de la page contact */
+.contact h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--violet-doux);
+}
+
+.contact h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .contact-container {
@@ -427,3 +445,433 @@ footer div:hover{
 }
 
 
+/*mes divertissement.html*/
+/* === Divertissement avancé === */
+.divertissement {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.divertissement .entertainment-hero h1 {
+    color: var(--violet-doux);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.divertissement .entertainment-hero p {
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.divertissement .entertainment-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Cartes avec dégradé et animation */
+.divertissement .card {
+    background: linear-gradient(145deg, #f8f8ff, #eef0ff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.divertissement .card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+/* Icones animées */
+.divertissement .card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.divertissement .card:hover .card-icon {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.divertissement .card-content h3 {
+    color: #6c63ff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.divertissement .card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.divertissement .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.divertissement .tags span {
+    display: inline-block;
+    background: #dfe1ff;
+    color: #6c63ff;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.divertissement .tags span:hover {
+    background: #6c63ff;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Animation fade-in lors du scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.divertissement .card {
+    animation: fadeInUp 0.8s ease forwards;
+}
+/* Slider horizontal pour divertissement */
+.divertissement .entertainment-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+/* Masquer la scrollbar pour la modernité */
+.divertissement .entertainment-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Bouton "Voir plus" sur les cartes */
+.divertissement .entertainment-container .card .btn-see-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: var(--violet-doux);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.divertissement .entertainment-container .card .btn-see-more:hover {
+    background-color: var(--violet-foncé);
+    transform: translateY(-3px);
+}
+
+/* Parallax léger et effet hover sur les icônes */
+.divertissement .entertainment-container .card .card-icon {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.divertissement .entertainment-container .card:hover .card-icon {
+    transform: scale(1.15) rotate(10deg);
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* Petits ajustements responsive pour le slider */
+@media (max-width: 768px) {
+    .divertissement .entertainment-container {
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .divertissement .entertainment-container .card {
+        min-width: 250px;
+    }
+}
+
+/* ===== VERSION CLAIRE MODERNE ===== */
+
+.divertissement {
+    padding: 40px;
+    background: #f5f7fb;
+}
+
+/* HERO */
+.divertissement .entertainment-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.divertissement .entertainment-hero h1 {
+    font-size: 2.8rem;
+    color: #333;
+}
+
+.divertissement .entertainment-hero p {
+    color: #666;
+}
+
+/* GRID */
+.divertissement .entertainment-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.divertissement .card {
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* IMAGE EN BACKGROUND STYLE 🔥 */
+.divertissement .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+/* EFFET ZOOM */
+.divertissement .card:hover img {
+    transform: scale(1.1);
+}
+
+/* DEGRADE PAR DESSUS */
+.divertissement .card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    top: 0;
+    left: 0;
+}
+
+/* CONTENU PAR DESSUS IMAGE */
+.divertissement .card-content {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+/* TITRE */
+.divertissement .card-content h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+/* TEXTE */
+.divertissement .card-content p {
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+/* TAGS */
+.divertissement .tags span {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+}
+
+/* BOUTON */
+.divertissement .btn-see-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: white;
+    color: #333;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.divertissement .btn-see-more:hover {
+    background: #eee;
+}
+
+/* AUDIO (optionnel) */
+.divertissement audio {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/*Passion*/
+
+/* SECTION PRINCIPALE */
+.passion {
+    padding: 60px 8%;
+    background: #f4f6fb; /* pas trop sombre */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: var(--violet-doux);
+}
+
+.intro p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* GRID LAYOUT */
+.entertainment-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 18px;
+}
+
+/* BOX GENERAL */
+.ent-box {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ent-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* IMAGE / VIDEO */
+.ent-box img,
+.ent-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* OVERLAY */
+.ent-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.1)
+    );
+}
+
+/* TEXT */
+.ent-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    color: white;
+    z-index: 2;
+}
+
+.ent-text h2,
+.ent-text h3 {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.ent-text p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* TAG */
+.ent-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    margin-bottom: 5px;
+}
+
+/* FEATURE CARD (GRANDE) */
+.ent-feature {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* CARDS NORMALES */
+.ent-card {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* CITATION */
+.citation {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .entertainment-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ent-feature {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .entertainment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ent-feature {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+body{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+body.fade-out{
+    opacity: 0;
+}
