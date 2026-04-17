@@ -875,3 +875,63 @@ body{
 body.fade-out{
     opacity: 0;
 }
+
+
+/* =========================
+   RESPONSIVE GLOBAL FIX
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HERO MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    section.hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        margin: 4rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .apropos {
+        width: 90%;
+    }
+
+    .competences table {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
